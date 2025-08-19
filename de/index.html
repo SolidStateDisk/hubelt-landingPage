@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hubelt — On‑Demand 3D Printing</title>
-  <meta name="description" content="On‑demand 3D printing made simple. Upload, get an instant quote, and receive high‑quality prints fast." />
-  <meta property="og:title" content="Hubelt — On‑Demand 3D Printing" />
-  <meta property="og:description" content="On‑demand 3D printing made simple. Upload, get an instant quote, and receive high‑quality prints fast." />
+  <title>Hubelt — On-Demand-3D-Druck</title>
+  <meta name="description" content="On-Demand-3D-Druck leicht gemacht. Datei hochladen, Sofortpreis erhalten und hochwertige Drucke schnell bekommen." />
+  <meta property="og:title" content="Hubelt — On-Demand-3D-Druck" />
+  <meta property="og:description" content="On-Demand-3D-Druck leicht gemacht. Datei hochladen, Sofortpreis erhalten und hochwertige Drucke schnell bekommen." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:url" content="https://yourdomain.com/de/" />
   <meta property="og:image" content="/og-image.png" />
+
+  <!-- hreflang for SEO -->
+  <link rel="alternate" href="https://yourdomain.com/en/" hreflang="en" />
+  <link rel="alternate" href="https://yourdomain.com/de/" hreflang="de" />
+  <link rel="alternate" href="https://yourdomain.com/en/" hreflang="x-default" />
+
   <link rel="icon" href="/favicon.ico" />
-  <!-- Tailwind CSS CDN (for fast iteration). Replace with a local build later if you want. -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
@@ -28,15 +33,18 @@
           <span class="font-semibold tracking-tight">Hubelt</span>
         </a>
         <nav class="hidden md:flex items-center gap-8 text-sm">
-          <a href="#how" class="hover:text-slate-900">How it works</a>
-          <a href="#features" class="hover:text-slate-900">Features</a>
-          <a href="#about" class="hover:text-slate-900">About</a>
-          <a href="#contact" class="hover:text-slate-900">Contact</a>
+          <a href="#how" class="hover:text-slate-900">So funktioniert’s</a>
+          <a href="#features" class="hover:text-slate-900">Vorteile</a>
+          <a href="#about" class="hover:text-slate-900">Über uns</a>
+          <a href="#contact" class="hover:text-slate-900">Kontakt</a>
         </nav>
         <div class="flex items-center gap-3">
+          <!-- Language switch -->
+          <a href="/en/" class="hidden sm:inline-flex rounded-xl border border-slate-300 px-3 py-2 text-sm hover:bg-white" hreflang="en" aria-label="Switch to English">EN</a>
+
           <a href="https://app.yourdomain.com" class="hidden sm:inline-flex rounded-xl border border-slate-300 px-4 py-2 text-sm hover:bg-white">Portal Login</a>
-          <a href="https://app.yourdomain.com/signup" class="inline-flex rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:opacity-90">Get Started</a>
-          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-white" aria-label="Open Menu">
+          <a href="https://app.yourdomain.com/signup" class="inline-flex rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:opacity-90">Jetzt starten</a>
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-white" aria-label="Menü öffnen">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M3.75 5.25h16.5v1.5H3.75zM3.75 11.25h16.5v1.5H3.75zM3.75 17.25h16.5v1.5H3.75z"/></svg>
           </button>
         </div>
@@ -45,11 +53,12 @@
     <!-- Mobile menu -->
     <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200/70">
       <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 space-y-2 text-sm">
-        <a href="#how" class="block">How it works</a>
-        <a href="#features" class="block">Features</a>
-        <a href="#about" class="block">About</a>
-        <a href="#contact" class="block">Contact</a>
+        <a href="#how" class="block">So funktioniert’s</a>
+        <a href="#features" class="block">Vorteile</a>
+        <a href="#about" class="block">Über uns</a>
+        <a href="#contact" class="block">Kontakt</a>
         <a href="https://app.yourdomain.com" class="block">Portal Login</a>
+        <a href="/en/" class="block" hreflang="en">English</a>
       </div>
     </div>
   </header>
@@ -59,21 +68,20 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center py-16 sm:py-20">
         <div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">On-site 3D printing, without the hassle.</h1>
-          <p class="mt-5 text-lg text-slate-600">Skip the logistics — we bring the production directly to you.</p>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">3D-Druck vor Ort, ganz ohne Aufwand.</h1>
+          <p class="mt-5 text-lg text-slate-600">Sparen Sie sich die Logistik – wir bringen die Produktion direkt zu Ihnen.</p>
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="https://app.yourdomain.com/signup" class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-white font-medium hover:opacity-90">Enter Portal</a>
-            <a href="#how" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 font-medium hover:bg-white">See how it works</a>
+            <a href="https://app.yourdomain.com/signup" class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-white font-medium hover:opacity-90">Portal öffnen</a>
+            <a href="#how" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 font-medium hover:bg-white">So funktioniert’s ansehen</a>
           </div>
-          <p class="mt-4 text-xs text-slate-500">No company account yet? Start as an individual — you can switch later.</p>
+          <p class="mt-4 text-xs text-slate-500">Noch kein Unternehmenskonto? Starten Sie als Privatperson – ein Wechsel ist später möglich.</p>
         </div>
         <div class="relative">
           <div class="aspect-[16/10] w-full rounded-2xl bg-white shadow-xl ring-1 ring-slate-200 overflow-hidden">
-            <!-- Replace the placeholder with a product screenshot -->
             <div class="h-full w-full grid place-items-center">
               <div class="text-center p-6">
                 <div class="mx-auto mb-4 h-24 w-24 rounded-2xl bg-slate-900"></div>
-                <p class="text-sm text-slate-500">Product screenshot placeholder</p>
+                <p class="text-sm text-slate-500">Platzhalter für Produktscreenshot</p>
               </div>
             </div>
           </div>
@@ -86,84 +94,80 @@
   <section id="how" class="py-16 sm:py-20">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-slate-900">How it works</h2>
-        <p class="mt-3 text-slate-600">From CAD to part in days, not weeks.</p>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900">So funktioniert’s</h2>
+        <p class="mt-3 text-slate-600">Von CAD zur fertigen Komponente in Tagen statt Wochen.</p>
       </div>
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <div class="rounded-2xl bg-white p-6 shadow ring-1 ring-slate-200">
           <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white">1</div>
           <h3 class="font-semibold">Upload</h3>
-          <p class="mt-1 text-sm text-slate-600">Upload STL/STEP. We auto‑check wall thickness and overhangs.</p>
+          <p class="mt-1 text-sm text-slate-600">STL/STEP hochladen. Wir prüfen automatisch Wandstärken und Überhänge.</p>
         </div>
         <div class="rounded-2xl bg-white p-6 shadow ring-1 ring-slate-200">
           <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white">2</div>
-          <h3 class="font-semibold">Configure</h3>
-          <p class="mt-1 text-sm text-slate-600">Choose material (PLA, PETG, ABS, Nylon), color, infill, and finish.</p>
+          <h3 class="font-semibold">Konfigurieren</h3>
+          <p class="mt-1 text-sm text-slate-600">Material (PLA, PETG, ABS, Nylon), Farbe, Infill und Finish wählen.</p>
         </div>
         <div class="rounded-2xl bg-white p-6 shadow ring-1 ring-slate-200">
           <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white">3</div>
-          <h3 class="font-semibold">Instant quote</h3>
-          <p class="mt-1 text-sm text-slate-600">Transparent pricing with lead time estimates before you pay.</p>
+          <h3 class="font-semibold">Sofortangebot</h3>
+          <p class="mt-1 text-sm text-slate-600">Transparente Preise mit Lieferzeit, bevor Sie zahlen.</p>
         </div>
         <div class="rounded-2xl bg-white p-6 shadow ring-1 ring-slate-200">
           <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white">4</div>
-          <h3 class="font-semibold">Fulfillment</h3>
-          <p class="mt-1 text-sm text-slate-600">Printed, checked, and shipped. Local pickup available in select areas.</p>
+          <h3 class="font-semibold">Abwicklung</h3>
+          <p class="mt-1 text-sm text-slate-600">Gedruckt, geprüft und versendet. Abholung lokal in ausgewählten Regionen.</p>
         </div>
       </div>
     </div>
   </section>
-<!-- Features / Benefits -->
-<section id="features" class="py-16 sm:py-20 bg-white">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900">Why Hubelt</h2>
-      <p class="mt-3 text-slate-600">Your design, our printer, zero hassle.</p>
-    </div>
-    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      
-      <div class="rounded-2xl border border-slate-200 p-6">
-        <h3 class="font-semibold">Print on demand</h3>
-        <p class="mt-1 text-sm text-slate-600">On-site 3D printing with zero shipping delays.</p>
-      </div>
-      
-      <div class="rounded-2xl border border-slate-200 p-6">
-        <h3 class="font-semibold">Tweak &amp; print</h3>
-        <p class="mt-1 text-sm text-slate-600">Change CAD parameters and generate new models instantly.</p>
-      </div>
-      
-      <div class="rounded-2xl border border-slate-200 p-6">
-        <h3 class="font-semibold">Service, not hardware</h3>
-        <p class="mt-1 text-sm text-slate-600">Stop anytime. No equipment to buy or maintain.</p>
-      </div>
-      
-      <div class="rounded-2xl border border-slate-200 p-6">
-        <h3 class="font-semibold">Your files stay safe</h3>
-        <p class="mt-1 text-sm text-slate-600">Closed-loop cloud system. CAD never leaves your control.</p>
-      </div>
-      
-      <div class="rounded-2xl border border-slate-200 p-6">
-        <h3 class="font-semibold">Humans behind the tech</h3>
-        <p class="mt-1 text-sm text-slate-600">Expert support when you need it most.</p>
-      </div>
-      
-      <div class="rounded-2xl border border-slate-200 p-6">
-        <h3 class="font-semibold">Any material, any job</h3>
-        <p class="mt-1 text-sm text-slate-600">PLA, PETG, ABS, Nylon, carbon-fiber composites, and more.</p>
-      </div>
-      
 
-
+  <!-- Features / Benefits -->
+  <section id="features" class="py-16 sm:py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900">Warum Hubelt</h2>
+        <p class="mt-3 text-slate-600">Ihr Design, unser Drucker, null Aufwand.</p>
+      </div>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-semibold">Print on Demand</h3>
+          <p class="mt-1 text-sm text-slate-600">3D-Druck vor Ort ohne Versandverzögerungen.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-semibold">Anpassen &amp; drucken</h3>
+          <p class="mt-1 text-sm text-slate-600">CAD-Parameter ändern und sofort neue Modelle generieren.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-semibold">Service statt Hardware</h3>
+          <p class="mt-1 text-sm text-slate-600">Jederzeit kündbar. Keine Geräte kaufen oder warten.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-semibold">Ihre Daten bleiben sicher</h3>
+          <p class="mt-1 text-sm text-slate-600">Geschlossenes Cloud-System. CAD verlässt nie Ihre Kontrolle.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-semibold">Menschen hinter der Technik</h3>
+          <p class="mt-1 text-sm text-slate-600">Experten-Support, wenn es darauf ankommt.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-semibold">Jedes Material, jeder Job</h3>
+          <p class="mt-1 text-sm text-slate-600">PLA, PETG, ABS, Nylon, CF-Verbundwerkstoffe und mehr.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- About / Vision -->
   <section id="about" class="py-16 sm:py-20">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <div class="rounded-2xl bg-white p-8 shadow ring-1 ring-slate-200">
-        <h2 class="text-3xl font-bold tracking-tight text-slate-900">About</h2>
-        <p class="mt-4 text-slate-700">We are a small team building a modern, transparent way to order 3D printed parts. No company paperwork required to start — just your CAD and a goal. We’re currently piloting with makers and engineers; if you’d like to collaborate, get in touch.</p>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900">Über uns</h2>
+        <p class="mt-4 text-slate-700">
+          Wir sind ein kleines Team und bauen einen modernen, transparenten Weg, 3D-gedruckte Teile zu bestellen.
+          Kein Unternehmens-Onboarding nötig – nur Ihre CAD-Datei und ein Ziel. Aktuell pilotieren wir mit
+          Makers und Ingenieur:innen. Wenn Sie mit uns zusammenarbeiten möchten, melden Sie sich gern.
+        </p>
       </div>
     </div>
   </section>
@@ -172,27 +176,26 @@
   <section id="contact" class="py-16 sm:py-20 bg-white">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <div class="rounded-2xl border border-slate-200 p-8">
-        <h2 class="text-3xl font-bold tracking-tight text-slate-900">Contact</h2>
-        <p class="mt-3 text-slate-600">Questions or partnership ideas? Send a message.</p>
-        <!-- Formspree placeholder action. Replace with your endpoint or use mailto: -->
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900">Kontakt</h2>
+        <p class="mt-3 text-slate-600">Fragen oder Ideen für Partnerschaften? Schreiben Sie uns.</p>
         <form class="mt-8 grid gap-4" action="https://formspree.io/f/your-id" method="POST">
           <div class="grid gap-2">
             <label for="name" class="text-sm font-medium">Name</label>
-            <input id="name" name="name" required class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-900" placeholder="Your name" />
+            <input id="name" name="name" required class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-900" placeholder="Ihr Name" />
           </div>
           <div class="grid gap-2">
-            <label for="email" class="text-sm font-medium">Email</label>
-            <input id="email" name="email" type="email" required class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-900" placeholder="you@example.com" />
+            <label for="email" class="text-sm font-medium">E-Mail</label>
+            <input id="email" name="email" type="email" required class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-900" placeholder="sie@beispiel.de" />
           </div>
           <div class="grid gap-2">
-            <label for="message" class="text-sm font-medium">Message</label>
-            <textarea id="message" name="message" rows="5" required class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-900" placeholder="Tell us about your project..."></textarea>
+            <label for="message" class="text-sm font-medium">Nachricht</label>
+            <textarea id="message" name="message" rows="5" required class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-900" placeholder="Erzählen Sie uns von Ihrem Projekt..."></textarea>
           </div>
           <div>
-            <button type="submit" class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-white font-medium hover:opacity-90">Send</button>
+            <button type="submit" class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-white font-medium hover:opacity-90">Senden</button>
           </div>
         </form>
-        <p class="mt-4 text-xs text-slate-500">Prefer email? <a href="mailto:hello@yourdomain.com" class="underline">hello@yourdomain.com</a></p>
+        <p class="mt-4 text-xs text-slate-500">Oder per E-Mail: <a href="mailto:hello@yourdomain.com" class="underline">hello@yourdomain.com</a></p>
       </div>
     </div>
   </section>
@@ -200,21 +203,20 @@
   <!-- Footer -->
   <footer class="py-10">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-      <p>© <span id="y"></span> Hubelt. All rights reserved.</p>
+      <p>© <span id="y"></span> Hubelt. Alle Rechte vorbehalten.</p>
       <div class="flex items-center gap-6">
-        <a href="#" class="hover:text-slate-700">Privacy</a>
-        <a href="#" class="hover:text-slate-700">Terms</a>
+        <a href="#" class="hover:text-slate-700">Datenschutz</a>
+        <a href="#" class="hover:text-slate-700">AGB</a>
+        <a href="#" class="hover:text-slate-700">Impressum</a>
         <a href="https://app.yourdomain.com" class="hover:text-slate-700">Portal</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Mobile menu toggle
     const btn = document.getElementById('menuBtn');
     const menu = document.getElementById('mobileMenu');
     btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
-    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
